@@ -10015,7 +10015,32 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var app = new _vue2.default({
     el: '#app',
     data: {
-        message: 'Hello Vue!'
+        newTodo: "",
+        todoList: []
+    },
+    created: function created() {
+        var _this = this;
+
+        window.onbeforeunload = function () {
+            var dataString = JSON.stringify(_this.todoList);
+            window.localStorage.setItem("myTodos", dataString);
+        };
+        var oldTodoList = JSON.parse(window.localStorage.getItem("myTodos"));
+        this.todoList = oldTodoList || [];
+    },
+    methods: {
+        addTodo: function addTodo() {
+            this.todoList.push({
+                title: this.newTodo,
+                createdAt: new Date(),
+                done: false
+            });
+            this.newTodo = "";
+        },
+        removeTodo: function removeTodo(todo) {
+            var index = this.todoList.indexOf(todo);
+            this.todoList.splice(index, 1);
+        }
     }
 });
 
