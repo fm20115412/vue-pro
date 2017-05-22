@@ -107,7 +107,7 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../resumer" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="nodejs_interpreter_path" value="D:/Program Software/Nodejs/nodejs/node" />
     <property name="js.eslint.eslintPackage" value="" />
@@ -191,12 +191,12 @@
       <workItem from="1495424170178" duration="623000" />
       <workItem from="1495436829199" duration="1813000" />
       <workItem from="1495439012516" duration="341000" />
-      <workItem from="1495441031788" duration="3718000" />
+      <workItem from="1495441031788" duration="4319000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16162000" />
+    <option name="totallyTimeSpent" value="16763000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
