@@ -46,6 +46,7 @@ var app = new Vue({
             user.setPassword(this.formData.password)
             user.signUp().then(function (loginedUser) {
                 this.currentUser=this.getCurrentUser()
+                alert("注册成功")
             }),(error)=> {
                 alert("注册失败")
             }
@@ -53,12 +54,17 @@ var app = new Vue({
         login:function () {
             AV.User.logIn(this.formData.username,this.formData.password).then((loginedUser)=>{
                 this.currentUser=this.getCurrentUser()
+                alert("登陆成功")
             }),function (error) {
                 alert("登陆失败")
             }
         },
+        logout: function () {
+            AV.User.logOut()
+            this.currentUser=null
+            window.location.reload()
+        },
         getCurrentUser:function () {
-            console.log(AV.User.current())
             let {id,createdAt,attributes:{username}}=AV.User.current()
             return {id,username,createdAt}
         }

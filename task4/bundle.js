@@ -26625,6 +26625,7 @@ var app = new _vue2.default({
             user.setPassword(this.formData.password);
             user.signUp().then(function (loginedUser) {
                 this.currentUser = this.getCurrentUser();
+                alert("注册成功");
             }), function (error) {
                 alert("注册失败");
             };
@@ -26634,13 +26635,17 @@ var app = new _vue2.default({
 
             _leancloudStorage2.default.User.logIn(this.formData.username, this.formData.password).then(function (loginedUser) {
                 _this2.currentUser = _this2.getCurrentUser();
+                alert("登陆成功");
             }), function (error) {
                 alert("登陆失败");
             };
         },
+        logout: function logout() {
+            _leancloudStorage2.default.User.logOut();
+            this.currentUser = null;
+            window.location.reload();
+        },
         getCurrentUser: function getCurrentUser() {
-            console.log(_leancloudStorage2.default.User.current());
-
             var _AV$User$current = _leancloudStorage2.default.User.current(),
                 id = _AV$User$current.id,
                 createdAt = _AV$User$current.createdAt,
