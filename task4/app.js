@@ -46,7 +46,6 @@ var app = new Vue({
             user.setPassword(this.formData.password)
             user.signUp().then(function (loginedUser) {
                 this.currentUser=this.getCurrentUser()
-                alert("注册成功")
             }),(error)=> {
                 alert("注册失败")
             }

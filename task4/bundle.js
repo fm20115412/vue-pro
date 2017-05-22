@@ -26625,7 +26625,6 @@ var app = new _vue2.default({
             user.setPassword(this.formData.password);
             user.signUp().then(function (loginedUser) {
                 this.currentUser = this.getCurrentUser();
-                alert("注册成功");
             }), function (error) {
                 alert("注册失败");
             };
