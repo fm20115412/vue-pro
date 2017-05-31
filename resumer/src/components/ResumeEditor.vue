@@ -16,7 +16,19 @@
         <li v-for="item in resume.config"
             v-show="item.field===selected"
         >
-          {{resume[item.field]}}
+          <div v-if="resume[item.field] instanceof Array">
+              <div class="subitem" v-for="subitem in resume[item.field]">
+                <div class="resumeField" v-for="(value,key) in subitem">
+                  <label >{{key}}</label>
+                  <input type="text" :value="value">
+                </div>
+              </div>
+              <hr>
+          </div>
+          <div v-else class="resumeField" v-for="(value,key) in resume[item.field]">
+            <label >{{key}}</label>
+            <input type="text" :value="value">
+          </div>
         </li>
       </ol>
   </div>
@@ -41,17 +53,32 @@
                       city:"",
                       title:""
                   },
-                  "work history":[],
-                  education:[],
-                  projects:[],
-                  awards:[],
-                  contacts:[],
+                  'work history': [
+                    {company: 'AL', content: '我的第二份工作是'},
+                    {company: 'TX', content: '我的第一份工作是'},
+                  ],
+                  education: [
+                    {school: 'AL', content: '文字'},
+                    {school: 'TX', content: '文字'},
+                  ],
+                  projects: [
+                    {name: 'project A', content: '文字'},
+                    {name: 'project B', content: '文字'},
+                  ],
+                  awards: [
+                    {name: 'awards A', content: '文字'},
+                    {name: 'awards B', content: '文字'},
+                  ],
+                  contacts: [
+                    {contact: 'phone', content: '13812345678'},
+                    {contact: 'qq', content: '12345678'},
+                  ]
             }
           }
       }
   }
 </script>
-<style lang="scss" rel="stylesheet/scss">
+<style scoped lang="scss" rel="stylesheet/scss">
   #resumeEditor{
     width: 35%;
     background: #fff;
@@ -78,9 +105,33 @@
         }
       }
     }
+    > .panels{
+      flex-grow: 1;
+      > li{
+        padding: 24px;
+      }
+    }
   }
   ol{
     list-style: none;
+  }
+  .resumeField{
+    >label{
+      display: block;
+    }
+    input[type=text]{
+      margin:16px 0;
+      border:1px solid #ddd;
+      box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.25);
+      width:100%;
+      height:40px;
+      padding: 0 8px;
+    }
+  }
+  hr{
+    border: none;
+    border-top:1px solid #ddd;
+    margin: 24px 0;
   }
   svg.icon{
     width:24px;
