@@ -5,7 +5,7 @@
 </template>
 <script>
   export default{
-    name:"resumePreview"
+    name:"ResumePreview"
   }
 </script>
 <style>
