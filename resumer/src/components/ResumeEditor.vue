@@ -10,6 +10,7 @@
 </script>
 <style>
   #resumeEditor{
-    color:red
+    width:35%;
+    background:#444
   }
 </style>

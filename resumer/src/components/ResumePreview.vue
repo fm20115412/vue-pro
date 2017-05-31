@@ -10,6 +10,7 @@
 </script>
 <style>
   #resumePreview{
-    color:brown;
+    width: 61.66667%;
+    background: #777;
   }
 </style>
