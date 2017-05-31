@@ -32,6 +32,7 @@
       height:100vh;
       display: flex;
       flex-direction: column;
+      background: #EAEBEC;
   }
   .page>main{
     flex-grow: 1;
@@ -39,8 +40,11 @@
   .page>main{
     min-width: 1024px;
     max-width: 1440px;
-    margin: 0;
+    margin: 16px 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 16px;
+    width:100%;
+    align-self: center;
   }
 </style>
