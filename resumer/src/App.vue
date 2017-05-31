@@ -27,24 +27,24 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" rel="stylesheet/scss">
   .page{
-      height:100vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #EAEBEC;
+    > main {
+      flex-grow: 1;
+    }
+    > main {
+      min-width: 1024px;
+      max-width: 1440px;
+      margin: 16px 0;
       display: flex;
-      flex-direction: column;
-      background: #EAEBEC;
-        >main{
-           flex-grow: 1;
-         }
-        >main{
-          min-width: 1024px;
-          max-width: 1440px;
-          margin: 16px 0;
-          display: flex;
-          justify-content: space-between;
-          padding: 0 16px;
-          width:100%;
-          align-self: center;
-        }
+      justify-content: space-between;
+      padding: 0 16px;
+      width: 100%;
+      align-self: center;
+    }
   }
 </style>
