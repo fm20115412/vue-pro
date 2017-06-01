@@ -30,33 +30,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ResumeEditor.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ResumeEditor.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/ResumeEditor.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="89" column="43" lean-forward="false" selection-start-line="89" selection-start-column="43" selection-end-line="89" selection-end-column="43" />
-              <folding>
-                <element signature="n#nav#0;n#div#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#li#0;n#ol#0;n#div#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="e#1338#1672#0" expanded="false" />
-                <element signature="e#1700#1814#0" expanded="false" />
-                <element signature="e#1850#1987#0" expanded="false" />
-                <element signature="e#2018#2141#0" expanded="false" />
-                <element signature="e#2171#2304#0" expanded="false" />
-                <element signature="e#2332#2463#0" expanded="false" />
-                <element signature="e#2493#2636#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="660">
+              <caret line="47" column="15" lean-forward="true" selection-start-line="47" selection-start-column="15" selection-end-line="47" selection-end-column="15" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/store/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+            <state relative-caret-position="297">
+              <caret line="45" column="13" lean-forward="false" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
               <folding>
                 <element signature="e#38#61#0" expanded="true" />
+                <element signature="e#175#1100#0" expanded="false" />
+                <element signature="e#190#440#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -91,8 +83,8 @@
         <option value="$PROJECT_DIR$/static/svg_icons/add.svg" />
         <option value="$PROJECT_DIR$/static/svg_icons/book.svg" />
         <option value="$PROJECT_DIR$/src/App.vue" />
-        <option value="$PROJECT_DIR$/src/components/ResumeEditor.vue" />
         <option value="$PROJECT_DIR$/src/store/index.js" />
+        <option value="$PROJECT_DIR$/src/components/ResumeEditor.vue" />
       </list>
     </option>
   </component>
@@ -114,8 +106,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="996" />
-    <option name="width" value="691" />
+    <option name="x" value="767" />
+    <option name="width" value="920" />
     <option name="height" value="1017" />
   </component>
   <component name="ProjectView">
@@ -374,15 +366,15 @@
       <workItem from="1495502736587" duration="50000" />
       <workItem from="1495548987967" duration="30000" />
       <workItem from="1496198842722" duration="17186000" />
-      <workItem from="1496280920426" duration="3266000" />
+      <workItem from="1496280920426" duration="4198000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22755000" />
+    <option name="totallyTimeSpent" value="23687000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="996" y="0" width="691" height="1017" extended-state="0" />
+    <frame x="767" y="0" width="920" height="1017" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20758294" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -456,17 +448,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#nav#0;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#li#0;n#ol#0;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="e#1338#1672#0" expanded="false" />
-            <element signature="e#1700#1814#0" expanded="false" />
-            <element signature="e#1850#1987#0" expanded="false" />
-            <element signature="e#2018#2141#0" expanded="false" />
-            <element signature="e#2171#2304#0" expanded="false" />
-            <element signature="e#2332#2463#0" expanded="false" />
-            <element signature="e#2493#2636#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -767,31 +749,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ResumeEditor.vue">
+    <entry file="file://$PROJECT_DIR$/src/store/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
-          <caret line="89" column="43" lean-forward="false" selection-start-line="89" selection-start-column="43" selection-end-line="89" selection-end-column="43" />
+          <caret line="45" column="13" lean-forward="false" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
           <folding>
-            <element signature="n#nav#0;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#li#0;n#ol#0;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="e#1338#1672#0" expanded="false" />
-            <element signature="e#1700#1814#0" expanded="false" />
-            <element signature="e#1850#1987#0" expanded="false" />
-            <element signature="e#2018#2141#0" expanded="false" />
-            <element signature="e#2171#2304#0" expanded="false" />
-            <element signature="e#2332#2463#0" expanded="false" />
-            <element signature="e#2493#2636#0" expanded="false" />
+            <element signature="e#38#61#0" expanded="true" />
+            <element signature="e#175#1100#0" expanded="false" />
+            <element signature="e#190#440#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/index.js">
+    <entry file="file://$PROJECT_DIR$/src/components/ResumeEditor.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-          <folding>
-            <element signature="e#38#61#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="660">
+          <caret line="47" column="15" lean-forward="true" selection-start-line="47" selection-start-column="15" selection-end-line="47" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>
