@@ -17,13 +17,9 @@
   import ResumeEditor from "./components/ResumeEditor"
   import ResumePreview from "./components/ResumePreview"
   import icons from "./assets/icons"
+  import store from "./store/index"
   export default {
-    name: 'app',
-    data: function () {
-      return {
-        text:"nice to meet you !"
-      }
-    },
+    store,
     components:{Topbar,ResumeEditor,ResumePreview},
     created(){
         document.body.insertAdjacentHTML("afterbegin",icons)

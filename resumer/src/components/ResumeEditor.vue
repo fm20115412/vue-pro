@@ -30,6 +30,10 @@
             <input type="text" :value="value">
           </div>
         </li>
+        <li>{{count}}
+          <button @click="add">test</button>
+        </li>
+
       </ol>
   </div>
 </template>
@@ -75,7 +79,17 @@
                   ]
             }
           }
-      }
+      },
+    computed:{
+          count(){
+              return this.$store.state.count
+          }
+    },
+    methods:{
+          add(){
+              this.$store.commit("increment")
+          }
+    }
   }
 </script>
 <style scoped lang="scss" rel="stylesheet/scss">
