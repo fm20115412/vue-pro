@@ -20,14 +20,14 @@
               <div class="subitem" v-for="subitem in resume[item.field]">
                 <div class="resumeField" v-for="(value,key) in subitem">
                   <label >{{key}}</label>
-                  <input type="text" :value="value">
+                  <input type="text" :value="value" >
                 </div>
               </div>
               <hr>
           </div>
           <div v-else class="resumeField" v-for="(value,key) in resume[item.field]">
             <label >{{key}}</label>
-            <input type="text" :value="value">
+            <input type="text" :value="value" @input="changeResumeField(item.field,key,$event.target.value)">
           </div>
         </li>
       </ol>
@@ -50,12 +50,17 @@
       }
     },
     methods:{
+        changeResumeField(field,subfield,value){
+            this.$store.commit ("updateResume",{
+              field,subfield,value
+            })
+        }
     }
   }
 </script>
 <style scoped lang="scss" rel="stylesheet/scss">
   #resumeEditor{
-    width: 35%;
+    min-width: 35%;
     background: #fff;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
     display: flex;
