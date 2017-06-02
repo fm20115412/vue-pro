@@ -5,7 +5,7 @@
       <div class="actions">
         <a href="#" class="button primary" @click.prevent="signUpDialogVisible=true">注册</a>
         <MyDialog title="注册" :visible="signUpDialogVisible" @close="signUpDialogVisible=false">
-          <SignUpForm @success="logine($event)"></SignUpForm>
+          <SignUpForm @success="login($event)"></SignUpForm>
         </MyDialog>
         <a href="#" class="button">登录</a>
         <button class="button primary">保存</button>
