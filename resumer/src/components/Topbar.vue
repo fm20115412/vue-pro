@@ -5,7 +5,7 @@
       <div class="actions">
         <div v-if="logined" class="userActions">
           <span>你好,{{user.name}}</span>
-          <a href="#" class="button">登出</a>
+          <a href="#" class="button" @click.prevent="signOut">登出</a>
         </div>
         <div v-else class="userActions">
           <a href="#" class="button primary" @click.prevent="signUpDialogVisible=true">注册</a>
@@ -46,6 +46,10 @@
         login(user){
           this.signUpDialogVisible=false
           this.$store.commit("setUser",user)
+        },
+        signOut(){
+          AV.user.logOut()
+          this.$store.commit("removeUser")
         }
     }
   }
