@@ -4,51 +4,59 @@
       <span class="logo">Resumer</span>
       <div class="actions">
         <div v-if="logined" class="userActions">
-          <span>你好,{{user.name}}</span>
+          <span class="welcome">你好,{{user.name}}</span>
           <a href="#" class="button" @click.prevent="signOut">登出</a>
         </div>
         <div v-else class="userActions">
           <a href="#" class="button primary" @click.prevent="signUpDialogVisible=true">注册</a>
-          <MyDialog title="注册" :visible="signUpDialogVisible" @close="signUpDialogVisible=false">
-            <SignUpForm @success="login($event)"></SignUpForm>
-          </MyDialog>
-          <a href="#" class="button">登录</a>
+          <a href="#" class="button" @click.prevent="signInDialogVisible=true">登录</a>
         </div>
         <button class="button primary">保存</button>
         <button class="button">预览</button>
       </div>
     </div>
+    <MyDialog title="注册" :visible="signUpDialogVisible" @close="signUpDialogVisible=false">
+      <SignUpForm @success="signIn($event)"></SignUpForm>
+    </MyDialog>
+    <MyDialog title="登录" :visible="signInDialogVisible" @close="signInDialogVisible=false">
+      <SignInForm @success="signIn($event)"/>
+    </MyDialog>
   </div>
 </template>
 <script>
   import MyDialog from "./MyDialog"
   import SignUpForm from "./SignUpForm"
+  import SignInForm from "./SignInForm"
+  import AV from "../lib/leancloud"
   export default{
     name:"topbar",
     data(){
         return {
-            signUpDialogVisible:false
+          signUpDialogVisible:false,
+          signInDialogVisible:false
         }
     },
     computed:{
-        user(){
-            return this.$store.state.user
-        },
+      user(){
+          return this.$store.state.user
+      },
       logined(){
             return this.user.id
       }
     },
     components:{
       MyDialog,
-      SignUpForm
+      SignUpForm,
+      SignInForm
     },
     methods:{
-        login(user){
+        signIn(user){
           this.signUpDialogVisible=false
+          this.signInDialogVisible=false
           this.$store.commit("setUser",user)
         },
         signOut(){
-          AV.user.logOut()
+          AV.User.logOut()
           this.$store.commit("removeUser")
         }
     }
@@ -98,6 +106,9 @@
       display: flex;
       .userActions{
         margin-right: 3em;
+        .welcome{
+          margin-right: .5em;
+        }
       }
     }
   }
