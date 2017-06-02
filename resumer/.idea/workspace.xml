@@ -22,7 +22,7 @@
         <entry file="file://$PROJECT_DIR$/src/App.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1318">
-              <caret line="49" column="11" lean-forward="true" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
+              <caret line="49" column="11" lean-forward="false" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
               <folding>
                 <element signature="e#193#229#0" expanded="true" />
               </folding>
@@ -33,33 +33,34 @@
       <file leaf-file-name="ResumeEditor.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/ResumeEditor.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="54" column="34" lean-forward="false" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
+            <state relative-caret-position="540">
+              <caret line="54" column="17" lean-forward="false" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ResumePreview.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ResumePreview.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/ResumePreview.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2673">
-              <caret line="112" column="9" lean-forward="true" selection-start-line="112" selection-start-column="9" selection-end-line="112" selection-end-column="9" />
+            <state relative-caret-position="396">
+              <caret line="35" column="11" lean-forward="true" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
               <folding>
                 <element signature="n#section#0;n#div#0;n#template#0;n#!!top" expanded="false" />
                 <element signature="n#section#1;n#div#0;n#template#0;n#!!top" expanded="false" />
                 <element signature="n#section#2;n#div#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#section#3;n#div#0;n#template#0;n#!!top" expanded="false" />
+                <element signature="n#section#4;n#div#0;n#template#0;n#!!top" expanded="false" />
+                <element signature="n#section#5;n#div#0;n#template#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/store/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+            <state relative-caret-position="594">
+              <caret line="32" column="14" lean-forward="false" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="14" />
               <folding>
                 <element signature="e#38#61#0" expanded="true" />
               </folding>
@@ -95,9 +96,9 @@
         <option value="$PROJECT_DIR$/static/svg_icons/add.svg" />
         <option value="$PROJECT_DIR$/static/svg_icons/book.svg" />
         <option value="$PROJECT_DIR$/src/App.vue" />
-        <option value="$PROJECT_DIR$/src/components/ResumePreview.vue" />
         <option value="$PROJECT_DIR$/src/components/ResumeEditor.vue" />
         <option value="$PROJECT_DIR$/src/store/index.js" />
+        <option value="$PROJECT_DIR$/src/components/ResumePreview.vue" />
       </list>
     </option>
   </component>
@@ -119,8 +120,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="922" />
-    <option name="width" value="765" />
+    <option name="x" value="578" />
+    <option name="width" value="1109" />
     <option name="height" value="1017" />
   </component>
   <component name="ProjectView">
@@ -384,18 +385,18 @@
       <workItem from="1496198842722" duration="17186000" />
       <workItem from="1496280920426" duration="5496000" />
       <workItem from="1496299203425" duration="34000" />
-      <workItem from="1496381847804" duration="3039000" />
+      <workItem from="1496381847804" duration="3766000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28058000" />
+    <option name="totallyTimeSpent" value="28785000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="922" y="0" width="765" height="1017" extended-state="0" />
+    <frame x="578" y="0" width="1109" height="1017" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17575188" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17489986" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -433,7 +434,8 @@
             <element signature="n#section#0;n#div#0;n#template#0;n#!!top" expanded="false" />
             <element signature="n#section#1;n#div#0;n#template#0;n#!!top" expanded="false" />
             <element signature="n#section#2;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#section#3;n#div#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#section#4;n#div#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#section#5;n#div#0;n#template#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -474,7 +476,8 @@
             <element signature="n#section#0;n#div#0;n#template#0;n#!!top" expanded="false" />
             <element signature="n#section#1;n#div#0;n#template#0;n#!!top" expanded="false" />
             <element signature="n#section#2;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#section#3;n#div#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#section#4;n#div#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#section#5;n#div#0;n#template#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -784,13 +787,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Topbar.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
@@ -802,40 +798,49 @@
     <entry file="file://$PROJECT_DIR$/src/App.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1318">
-          <caret line="49" column="11" lean-forward="true" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
+          <caret line="49" column="11" lean-forward="false" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
           <folding>
             <element signature="e#193#229#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ResumePreview.vue">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2673">
-          <caret line="112" column="9" lean-forward="true" selection-start-line="112" selection-start-column="9" selection-end-line="112" selection-end-column="9" />
-          <folding>
-            <element signature="n#section#0;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#section#1;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#section#2;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#section#3;n#div#0;n#template#0;n#!!top" expanded="false" />
-          </folding>
+        <state relative-caret-position="462">
+          <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ResumeEditor.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="54" column="34" lean-forward="false" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
+        <state relative-caret-position="540">
+          <caret line="54" column="17" lean-forward="false" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/store/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+        <state relative-caret-position="594">
+          <caret line="32" column="14" lean-forward="false" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="14" />
           <folding>
             <element signature="e#38#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ResumePreview.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="35" column="11" lean-forward="true" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
+          <folding>
+            <element signature="n#section#0;n#div#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#section#1;n#div#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#section#2;n#div#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#section#4;n#div#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#section#5;n#div#0;n#template#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>

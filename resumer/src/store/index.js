@@ -3,6 +3,7 @@
  */
 import Vuex from "vuex"
 import Vue from "vue"
+import objectPath from "object-path"
 Vue.use(Vuex)
 export default new Vuex.Store({
   state:{
@@ -47,8 +48,8 @@ export default new Vuex.Store({
     switchTab(state,payload){
       state.selected=payload
     },
-    updateResume(state,{field,subfield,value}){
-      state.resume[field][subfield]=value
+    updateResume(state,{path,value}){
+      objectPath.set(state.resume,path,value);
     }
   }
 

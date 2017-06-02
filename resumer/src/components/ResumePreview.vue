@@ -26,6 +26,16 @@
         </li>
       </ol>
     </section>
+    <section data-name="projects" v-show="resume.projects">
+      <h2>获奖情况</h2>
+      <ol>
+        <li v-for="item in resume.projects">
+          <h3>{{item.name}}</h3>
+          <p v-show="item.content">{{item.content}}</p>
+        </li>
+      </ol>
+    </section>
+
     <section data-name="awards" v-show="resume.awards">
       <h2>获奖情况</h2>
       <ol>
