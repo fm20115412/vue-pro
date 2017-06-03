@@ -15,33 +15,27 @@ export default new Vuex.Store({
     resume:{
       config:[
         {field:"profile",icon:"id",keys:["name","city","title","birthday"]},
-        {field:"workHistory",icon:"work",keys:["company","details"]},
-        {field:"education",icon:"book",keys:["school","details"]},
-        {field:"projects",icon:"heart",keys:["name","details"]},
-        {field:"awards",icon:"cup",keys:["name","details"]},
-        {field:"contacts",icon:"phone",keys:["contact","content"]},
-      ],
-      profile:{
-
-      },
-      workHistory: [
-
-      ],
-      education: [
-
-      ],
-      projects: [
-
-      ],
-      awards: [
-
-      ],
-      contacts: [
-
+        {field:"workHistory",icon:"work",type:"array",keys:["company","details"]},
+        {field:"education",icon:"book",type:"array",keys:["school","details"]},
+        {field:"projects",icon:"heart",type:"array",keys:["name","details"]},
+        {field:"awards",icon:"cup",type:"array",keys:["name","details"]},
+        {field:"contacts",icon:"phone",type:"array",keys:["contact","content"]}
       ]
-},
+    }
   },
   mutations:{
+    initState(state,payload){
+      state.resume.config.map(item=>{
+        if(item.type=="array"){
+          Vue.set(state.resume,item.field,[])
+        }else{
+          Vue.set(state.resume,item.field,{})
+          item.keys.map(key=>{
+            Vue.set(state.resume[item.field],key,"")
+          })
+        }
+      })
+    },
     switchTab(state,payload){
       state.selected=payload
     },
