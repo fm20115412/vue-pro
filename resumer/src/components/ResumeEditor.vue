@@ -6,9 +6,9 @@
             :class="{active:item.field === selected}"
             @click="selected = item.field"
         >
-          <svg class="icon">
-            <use :xlink:href="`#icon-${item.icon}`"></use>
-          </svg>
+        <svg class="icon">
+          <use :xlink:href="`#icon-${item.icon}`"></use>
+        </svg>
         </li>
       </ol>
     </nav>
@@ -17,7 +17,7 @@
             v-show="item.field===selected"
         >
           <div v-if="item.type === 'array'">
-              <h2>{{$t(`resume.${item.field}._`}}</h2>
+              <h2>{{$t(`resume.${item.field}._`)}}</h2>
               <div class="subitem" v-for="(subitem,i) in resume[item.field]">
                 <button class="button remove small" @click="removeResumeSubfield(item.field, i)">删除</button>
                 <div class="resumeField" v-for="(value,key) in subitem">
@@ -29,7 +29,7 @@
             <button class="button" @click="addResumeSubfield(item.field)">新增</button>
           </div>
           <div v-else class="resumeField" v-for="(value,key) in resume[item.field]">
-            <label >{{$t(`resume.profile.${key}`}}</label>
+            <label >{{$t(`resume.profile.${key}`)}}</label>
             <input type="text" :value="value" @input="changeResumeField(`${item.field}.${key}`,$event.target.value)">
           </div>
         </li>
