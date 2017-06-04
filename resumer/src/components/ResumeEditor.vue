@@ -2,7 +2,7 @@
   <div id="resumeEditor">
     <nav>
       <ol>
-        <li v-for="(item,index) in resume.config"
+        <li v-for="(item,index) in resumeConfig"
             :class="{active:item.field === selected}"
             @click="selected = item.field"
         >
@@ -13,20 +13,23 @@
       </ol>
     </nav>
     <ol class="panels">
-        <li v-for="item in resume.config"
+        <li v-for="item in resumeConfig"
             v-show="item.field===selected"
         >
           <div v-if="item.type === 'array'">
+              <h2>{{$t(`resume.${item.field}._`}}</h2>
               <div class="subitem" v-for="(subitem,i) in resume[item.field]">
+                <button class="button remove small" @click="removeResumeSubfield(item.field, i)">删除</button>
                 <div class="resumeField" v-for="(value,key) in subitem">
-                  <label >{{key}}</label>
+                  <label >{{$t(`resume.${item.field}.${key}`)}}</label>
                   <input type="text" :value="value" @input="changeResumeField(`${item.field}.${i}.${key}`,$event.target.value)" >
                 </div>
+                <hr>
               </div>
-              <hr>
+            <button class="button" @click="addResumeSubfield(item.field)">新增</button>
           </div>
           <div v-else class="resumeField" v-for="(value,key) in resume[item.field]">
-            <label >{{key}}</label>
+            <label >{{$t(`resume.profile.${key}`}}</label>
             <input type="text" :value="value" @input="changeResumeField(`${item.field}.${key}`,$event.target.value)">
           </div>
         </li>
@@ -45,8 +48,8 @@
               return this.$store.commit('switchTab',value)
           }
       },
-      resume(){
-        return this.$store.state.resume
+      resumeConfig(){
+        return this.$store.state.resumeConfig
       }
     },
     methods:{
@@ -54,7 +57,14 @@
             this.$store.commit ("updateResume",{
              path,value
             })
-        }
+        },
+       addResumeSubfile(field){
+            this.$store.commit("addResumeSubfile",{field})
+       },
+      removeResumeSubfield(field, index){
+        this.$store.commit("removeResumeSubfield",{field,index})
+
+      }
     }
   }
 </script>
@@ -89,6 +99,9 @@
       flex-grow: 1;
       > li{
         padding: 24px;
+        h2{
+          margin-bottom: 24px;
+        }
       }
     }
   }
@@ -116,5 +129,13 @@
   svg.icon{
     width:24px;
     height:24px;
+  }
+  .subitem{
+    position: relative;
+    .button.remove{
+      position: absolute;
+      right: 0;
+      top:-3px;
+    }
   }
 </style>

@@ -61,7 +61,7 @@
   }
 </script>
 <style scoped lang="scss" rel="stylesheet/scss">
-  #topbar{
+  #topbar {
     background: #fff;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
     > .wrapper {
@@ -80,32 +80,11 @@
       color: #000;
     }
   }
-  button{
-    width: 72px;
-    height: 32px;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    background: #ddd;
-    color: #222;
-    text-decoration: none;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    vertical-align: middle;
-    &:hover {
-      box-shadow: 1px 1px 1px hsla(0, 0, 0, 0.5);
-    }
-    &.primary {
-      background: #02af5f;
-      color: white
-    }
-    .actions {
-      display: flex;
-      .userActions{
-        .welcome{
-          margin-right: .5em;
-        }
+  .actions {
+    display: flex;
+    .userActions{
+      .welcome{
+        margin-right: .5em;
       }
     }
   }

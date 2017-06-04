@@ -1,5 +1,6 @@
 <template>
   <div id="resumePreview">
+    <button class="button" @click="save">save</button>
     <section data-name="profile" v-if="resume.profile && resume.profile.name">
       <h1>{{resume.profile.name}}</h1>
       <h2>{{resume.profile.title}}</h2>
@@ -13,7 +14,7 @@
       <ol>
         <li v-for="item in resume.workHistory">
           <h3>{{item.company}}</h3>
-            <p v-show="item.content">{{item.content}}</p>
+          <p v-show="item.details">{{item.details}}</p>
         </li>
       </ol>
     </section>
@@ -22,7 +23,7 @@
       <ol>
         <li v-for="item in resume.education">
           <h3>{{item.school}}</h3>
-          <span v-show="item.content">- {{item.content}}</span>
+          <span v-show="item.details">- {{item.details}}</span>
         </li>
       </ol>
     </section>
@@ -30,7 +31,7 @@
       <ol>
         <li v-for="item in resume.projects">
           <h3>{{item.name}}</h3>
-          <p v-show="item.content">{{item.content}}</p>
+          <p v-show="item.details">{{item.details}}</p>
         </li>
       </ol>
     </section>
@@ -40,7 +41,7 @@
       <ol>
         <li v-for="item in resume.awards">
           <h3>{{item.name}}</h3>
-          <p v-show="item.content">{{item.content}}</p>
+          <p v-show="item.details">{{item.details}}</p>
         </li>
       </ol>
     </section>
@@ -61,6 +62,11 @@
     computed:{
         resume(){
             return this.$store.state.resume
+        }
+    },
+    methods:{
+        save(){
+            this.$store.dispatch("saveResume")
         }
     }
   }
