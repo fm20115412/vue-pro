@@ -24,7 +24,7 @@
     }
   </script>
 
-<style lang="scss">
+<style scoped lang="scss">
   resumeEditor{
     min-width:35%;
     background: #444;

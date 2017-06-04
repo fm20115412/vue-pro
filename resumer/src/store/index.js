@@ -31,7 +31,7 @@ export default new Vuex.Store({
   mutations:{
     initState(state,payload){
       state.resumeConfig.map(item=>{
-        if(item.type=="array"){
+        if(item.type==="array"){
           Vue.set(state.resume,item.field,[])
         }else{
           Vue.set(state.resume,item.field,{})
@@ -46,7 +46,6 @@ export default new Vuex.Store({
     },
     switchTab(state,payload){
       state.selected=payload
-      localStorage.setItem("state",JSON.stringify(state))
     },
     updateResume(state,{path,value}){
       objectPath.set(state.resume,path,value);
@@ -58,17 +57,18 @@ export default new Vuex.Store({
     removeUser(state){
       state.user.id=""
     },
-    addResumeSubfile(state,{field}){
+    addResumeSubfield(state,{field}){
       let empty={}
       state.resume[field].push(empty)
-      state.resumeConfig.filter(i=>{
-        i.field===field
-      })[0].keys.map(key=>{
-        Vue.set(empty,key,"")
+      state.resumeConfig.filter((i)=>i.field===field)[0].keys.map((key)=>{
+          Vue.set(empty,key,"")
       })
     },
     removeResumeSubfield(state,{field,index}){
       state.resume[field].splice(index,1)
+    },
+    setResumeId(state, { id }) {
+      state.resume.id = id
     },
     setResume(state,resume){
       state.resumeConfig.map(({field})=>{
@@ -80,7 +80,7 @@ export default new Vuex.Store({
   actions:{
     saveResume({state,commit},payload){
       var Resume = AV.Object.extend("Resume")
-      var resume = new Resume
+      var resume = new Resume()
       if (state.resume.id) {
         resume.id=state.resume.id
       }
@@ -90,6 +90,7 @@ export default new Vuex.Store({
       resume.set("projects", state.resume.projects)
       resume.set("awards", state.resume.awards)
       resume.set("contacts", state.resume.contacts)
+      resume.set('owner_id', getAVUser().id)
 
       var acl = new AV.ACL()
       acl.setPublicReadAccess(true)
@@ -105,7 +106,7 @@ export default new Vuex.Store({
       })
     },
     fetchResume({commit},payload){
-      var query=new AV.Query("resume")
+      var query=new AV.Query("Resume")
       query.equalTo("owner_id",getAVUser().id)
       query.first().then(resume=>{
         if(resume){

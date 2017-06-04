@@ -30,6 +30,7 @@
       </ol>
     </section>
     <section data-name="projects" v-if="resume.projects && resume.projects.length>0">
+      <h2>项目经历</h2>
       <ol>
         <li v-for="item in resume.projects">
           <h3>{{item.name}}</h3>
@@ -37,7 +38,6 @@
         </li>
       </ol>
     </section>
-
     <section data-name="awards" v-if="resume.awards && resume.awards.length>0">
       <h2>获奖情况</h2>
       <ol>

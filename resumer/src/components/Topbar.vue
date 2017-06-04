@@ -27,7 +27,7 @@
   import SignInForm from "./SignInForm"
   import AV from "../lib/leancloud"
   export default{
-    name:"topbar",
+    name:"Topbar",
     data(){
         return {
           signUpDialogVisible:false,

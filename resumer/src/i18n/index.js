@@ -7,7 +7,7 @@ export default{
       profile:{
         name:"Name",
         city:"City",
-        title:"Title",
+        title:"Job Title",
         birthday:"Birthday"
       }
     }
@@ -20,15 +20,15 @@ export default{
         title:"职位",
         birthday:"生日"
       },
-      workHistory:{
-        _:"工作经历",
-        company:"工作单位",
-        details:"详情"
+      workHistory: {
+        _: '工作经历',
+        company: '工作单位',
+        details: '详情'
       },
-      education:{
-        _:"教育经历",
-        school:"毕业院校",
-        details:"详情"
+      education: {
+        _: '教育经历',
+        school: '毕业院校',
+        details: '详情'
       },
       projects: {
         _: '项目经历',

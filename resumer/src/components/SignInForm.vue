@@ -21,7 +21,7 @@
   import getErrorMessage from "../lib/getErrorMessage"
   import getAVUser from "../lib/getAVUser"
   export default{
-    name:"signInForm",
+    name:"SignInForm",
     data(){
       return {
         formData:{
@@ -30,9 +30,6 @@
         },
         errorMessage:""
       }
-    },
-    created(){
-
     },
     methods:{
       signIn(){
