@@ -22,14 +22,31 @@
   import store from "./store/index"
   import AV from "./lib/leancloud"
   import getAVUser from "./lib/getAVUser"
+  document.body.insertAdjacentHTML("afterbegin",icons)
 
   export default {
     store,
     components:{Topbar,ResumeEditor,ResumePreview},
     created(){
-      document.body.insertAdjacentHTML("afterbegin",icons)
-      this.$store.commit("initState",{})
-      this.$store.commit("setUser",getAVUser())
+      this.$store.commit("initState")
+      let user=getAVUser()
+      this.$store.commit("setUser",user)
+      if(user.id){
+        this.$store.dispatch("fetchResume").then(()=>{
+        this.restoreResumeFromLocalStorage()
+        })
+      }else{
+        this.restoreResumeFromLocalStorage()
+      }
+    },
+    methods:{
+      restoreResumeFromLocalStorage(){
+        let resume=localStorage.getItem("resume")
+        if(resume){
+            this.$store.commit("setResume",JSON.parse(resume))
+        }
+      }
+
     }
   }
 </script>

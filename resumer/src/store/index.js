@@ -40,7 +40,9 @@ export default new Vuex.Store({
           })
         }
       })
-      Object.assign(state,payload)
+      if(payload){
+        Object.assign(state,payload)
+      }
     },
     switchTab(state,payload){
       state.selected=payload
@@ -48,6 +50,7 @@ export default new Vuex.Store({
     },
     updateResume(state,{path,value}){
       objectPath.set(state.resume,path,value);
+      localStorage.setItem("resume",JSON.stringify(state.resume))
     },
     setUser(state,payload){
       Object.assign(state.user,payload)
@@ -67,35 +70,48 @@ export default new Vuex.Store({
     removeResumeSubfield(state,{field,index}){
       state.resume[field].splice(index,1)
     },
-    setResumeId(state,{id}){
-      state.resume.id=id
+    setResume(state,resume){
+      state.resumeConfig.map(({field})=>{
+        Vue.set(state.resume,field,resume[field])
+      })
+      state.resume.id=resume.id
     }
   },
   actions:{
     saveResume({state,commit},payload){
       var Resume = AV.Object.extend("Resume")
+      var resume = new Resume
       if (state.resume.id) {
-
-      } else {
-        var resume = new Resume
-        resume.set("profile", state.resume.profile)
-        resume.set("workHistory", state.resume.workHistory)
-        resume.set("education", state.resume.education)
-        resume.set("projects", state.resume.projects)
-        resume.set("awards", state.resume.awards)
-        resume.set("contacts", state.resume.contacts)
-
-        var acl = new AV.ACL()
-        acl.setPublicReadAccess(true)
-        acl.setWriteAccess(AV.User.current(), true)
-
-        resume.setACL(acl)
-        resume.save().then(function (response) {
-          commit("setResumeId", {id: response.id})
-        }).catch(function (error) {
-          console.log(error)
-        })
+        resume.id=state.resume.id
       }
+      resume.set("profile", state.resume.profile)
+      resume.set("workHistory", state.resume.workHistory)
+      resume.set("education", state.resume.education)
+      resume.set("projects", state.resume.projects)
+      resume.set("awards", state.resume.awards)
+      resume.set("contacts", state.resume.contacts)
+
+      var acl = new AV.ACL()
+      acl.setPublicReadAccess(true)
+      acl.setWriteAccess(AV.User.current(), true)
+
+      resume.setACL(acl)
+      resume.save().then(function (response) {
+        if(!state.resume.id){
+          commit("setResumeId", {id: response.id})
+        }
+      }).catch(function (error) {
+        console.log(error)
+      })
+    },
+    fetchResume({commit},payload){
+      var query=new AV.Query("resume")
+      query.equalTo("owner_id",getAVUser().id)
+      query.first().then(resume=>{
+        if(resume){
+          commit("setResume",{id:resume.id,...resume.attributes})
+        }
+      })
     }
   }
 })
